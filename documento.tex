@@ -225,7 +225,6 @@ inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	\end{exampleblock}
 \end{frame}
 
-
 \begin{frame}[fragile]
 	\frametitle{Linha horizontal}
 	
@@ -259,6 +258,80 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
 <img src="IFRN.png" width="200" height="200" />
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\section{Listas}
+
+\begin{frame}
+	\frametitle{Listas}
+	
+	\begin{itemize}
+		\item São essenciais para estruturar conteúdo de forma legível e organizada na web;
+		\item Há três tipos diferentes de listas: 
+		\begin{itemize}
+			\item Lista não ordenadas;
+			\item Lista ordenadas; e
+			\item Lista de definição.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Lista não ordenada}
+	
+	\begin{itemize}
+		\item A tag principal é \structure{<ul>}, e o  item da lista é \structure{<li>};
+		\item Ideal para itens onde a ordem não importa.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<ul>
+	<li>Item A</li>
+	<li>Item B</li>
+	<li>Item C</li>
+</ul>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Lista ordenada}
+	
+	\begin{itemize}
+		\item A tag principal é \structure{<ol>}, e o item da lista é \structure{<li>}; e.
+		\item Ideal para conteúdo onde a sequência ou ordem é importante (passos, rankings, instruções)
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<ol>
+	<li>Primeiro Passo</li>
+	<li>Segundo Passo</li>
+	<li>Terceiro Passo</li>
+</ol>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Lista de definição}
+	
+	\begin{itemize}
+		\item  A tag principal é \structure{<dl>}, e o termo a definir é \structure{<dt>}, para a definição/descrição usa-se \structure{<dd>}; e
+		\item Utilizada para criar um glossário ou listar pares de Termo/Descrição ou Nome/Valor.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<dl>
+	<dt>HTML</dt>
+		<dd>Linguagem de Marcação de Hipertexto.</dd>
+	<dt>CSS</dt>
+		<dd>Folhas de Estilo em Cascata, usadas para estilizar elementos.</dd>
+</dl>
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
