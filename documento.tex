@@ -336,4 +336,80 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	\end{exampleblock}
 \end{frame}
 
+\section{Tabela}
+
+\begin{frame}[fragile]
+	\frametitle{Tabela}
+	
+	\begin{itemize}
+		\item  A tag \structure{<table>} define uma tabela para estruturar dados;
+		\item É organizada por linhas (\structure{<tr>}); e 
+		\item E cada linha possui células (\structure{<td>} para dados, \structure{<th>} para cabeçalho)
+	\end{itemize}
+	
+	\begin{exampleblock}{Exemplo}
+	\begin{lstlisting}
+<table>
+	<caption>Título da Tabela</caption>
+	<thead>
+		<tr>
+			<th>Cabeçalho 1</th>
+			<th>Cabeçalho 2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Dado 1</td>
+			<td>Dado 2</td>
+		</tr>
+	</tbody>
+</table>
+	\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\section{Hiperlink}
+
+\begin{frame}[fragile]
+	\frametitle{Link}
+	
+	\begin{itemize}
+		\item A tag \structure{<a></a>} cria links que permitem navegar entre páginas;
+		\item O atributo \structure{href} define o caminho;
+		\item Um caminho pode ser:
+		\begin{itemize}
+			\item Absoluto -- https://portal.ifrn.edu.br/; ou
+			\item Relativo -- sobre.html;
+		\end{itemize}
+		\item O atributo \structure{target}="\_blank" abre a página em uma nova aba.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+	<a href="https://portal.ifrn.edu.br/">Google</a>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\section{Formulário}
+
+\begin{frame}[fragile]
+	\frametitle{Formulário}
+	
+	\begin{itemize}
+		\item A tag \structure{<form></form>} define um formulário;
+		\item Os elementos de entrada de dados, podem ser: caixas de texto, botões de rádio, caixas de seleção ou botões;
+		\item O atributo \structure{action} corresponde ao endereço (URL) para onde os dados serão enviados após o envio; e
+		\item O \structure{method} corresponde ao método HTTP (\structure{GET} ou \structure{POST}) usado para enviar os dados. 
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<form action="salvar.php" method="POST">
+
+</form>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
 \end{document}
