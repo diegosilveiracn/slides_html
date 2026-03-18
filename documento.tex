@@ -203,6 +203,49 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	\end{exampleblock}
 \end{frame}
 
+
+\begin{frame}[fragile]
+	\frametitle{Negrito}
+	
+	\begin{itemize}
+		\item A tag \structure{<b>} é usada para marcar um texto em negrito.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<b>IFRN</b>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Itálico}
+	
+	\begin{itemize}
+		\item A tag \structure{<i>} é usada para marcar um texto em itálico.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<i>IFRN</i>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Sublinhado}
+	
+	\begin{itemize}
+		\item A tag \structure{<u>} é usada para marcar um texto com sublinhado.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<u>IFRN</u>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
 \begin{frame}[fragile]
 	\frametitle{Quebra de linha}
 	
@@ -341,26 +384,22 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	
 	\begin{itemize}
 		\item  A tag \structure{<table>} define uma tabela para estruturar dados;
-		\item É organizada por linhas (\structure{<tr>}); e 
-		\item E cada linha possui células (\structure{<td>} para dados, \structure{<th>} para cabeçalho)
+		\item É organizada por linhas (\structure{<tr>});
+		\item E cada linha possui células (\structure{<td>} para dados, \structure{<th>} para cabeçalho); e
+		\item O atributo \structure{border}, define a espessura da borda.
 	\end{itemize}
 	
 	\begin{exampleblock}{Exemplo}
 	\begin{lstlisting}
-<table>
-	<caption>Título da Tabela</caption>
-	<thead>
-		<tr>
-			<th>Cabeçalho 1</th>
-			<th>Cabeçalho 2</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Dado 1</td>
-			<td>Dado 2</td>
-		</tr>
-	</tbody>
+<table border="1">
+	<tr>
+		<th>Cabeçalho 1</th>
+		<th>Cabeçalho 2</th>
+	</tr>
+	<tr>
+		<td>Dado 1</td>
+		<td>Dado 2</td>
+	</tr>
 </table>
 	\end{lstlisting}
 \end{exampleblock}
