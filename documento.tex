@@ -12,7 +12,7 @@
 \lstset{
 language=html,
 upquote=true,
-basicstyle=\ttfamily\tiny,
+basicstyle=\ttfamily,%\tiny
 backgroundcolor=\color{white},
 keywordstyle=\color{blue}\bfseries,
 stringstyle=\color{red},
@@ -20,7 +20,7 @@ commentstyle=\color{green},
 %morecomment=[s][\color{green}]{/**}{*/},
 showspaces=false,
 showstringspaces=false,
-morekeywords={None,self,__init__,True,False},
+morekeywords={None,True,False},
 literate=
 {á}{{\'a}}1
 {Á}{{\'A}}1
@@ -138,8 +138,6 @@ diego.nascimento@ifrn.edu.br
 
 <meta>
 
-<body></body>
-
 <img>
 	\end{lstlisting}
 \end{exampleblock}
@@ -148,22 +146,24 @@ diego.nascimento@ifrn.edu.br
 \begin{frame}[fragile]
 	\frametitle{Primeira página}
 		
+	\begin{itemize}
+		\item Criar e salvar o arquivo com o nome \structure{index.html}.
+	\end{itemize}	
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
 <html>
-
-	<head>
-		<title>Minha página</title>
-	</head>
-
-	<body>
-		Olá, mundo!
-	</body>
-
+   <head>
+      <title>Minha página</title>
+   </head>
+   <body>
+      Olá, mundo!
+   </body>
 </html>
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
+
+\section{Texto}
 
 \begin{frame}[fragile]
 	\frametitle{Cabeçalho}
@@ -195,10 +195,9 @@ diego.nascimento@ifrn.edu.br
 	
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
-<p>O IFRN é uma instituição pública de ensino, fundada em 1909, que oferece educação profissional e tecnológica
-gratuita em diferentes níveis (básico, técnico, superior e pós-graduação), com 22 campi em todo o estado. Seu 
-objetivo é formar cidadãos e profissionais por meio da articulação entre ciência, cultura, trabalho e tecnologia,
-promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
+<p>O IFRN é uma instituição pública de ensino, fundada em 1909, 
+que oferece educação profissional e tecnológica gratuita em 
+diferentes níveis em todo o estado do Rio Grande do Norte.</p>
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
@@ -247,21 +246,87 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Quebra de linha}
+	\frametitle{Pequeno}
 	
 	\begin{itemize}
-		\item A tag  \structure{<br>} serve para inserir uma quebra de linha simples no texto; e
-		\item \alert{Não inicia um novo parágrafo}.
+		\item A tag \structure{<small>} é usada para deixa o texto menor.
 	\end{itemize}\vfill
 	
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
-<p>O IFRN é uma instituição pública de ensino, fundada em 1909, <br>
-que oferece educação profissional e tecnológicagratuita em diferentes <br>
-níveis (básico, técnico, superior e pós-graduação), com 22 campi em todo <br> 
-o estado. Seu objetivo é formar cidadãos e profissionais por meio da <br> 
-articulação entre ciência, cultura, trabalho e tecnologia, promovendo a <br>
-inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
+Dixa o texto <small>menor</small>.
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Riscado}
+	
+	\begin{itemize}
+		\item A tag \structure{<del>} é usada para riscar o texto.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+De <del>R$ 100,00</del> por R$ 95,30.
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Sobrescrito}
+	
+	\begin{itemize}
+		\item A tag \structure{<sob>} é usada para deixar o texto sobrescrito.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+A área do quadrado = b<sup>2</sup>.
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Subscrito}
+	
+	\begin{itemize}
+		\item A tag \structure{<sob>} é usada para deixar o texto subscrito.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+A fórmula da água é H<sub>2</sub>O.
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Marcação}
+	
+	\begin{itemize}
+		\item A tag \structure{<mark>} é usada para marcar o texto.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<mark>IFRN</mark>.
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Quebra de linha}
+	
+	\begin{itemize}
+		\item A tag  \structure{<br>} serve para inserir uma quebra de linha simples no texto.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<p>O IFRN é uma instituição pública de ensino, fundada em 1909, 
+que oferece educação profissional e tecnológica gratuita em <br>
+diferentes níveis em todo o estado do Rio Grande do Norte.</p>		
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
@@ -276,29 +341,11 @@ inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
-<h1>IFRN</h1>
+<h3>Contato</h3>
 
 <hr>
 
-<p>O IFRN é uma instituição pública de ensino, fundada em 1909, que oferece educação profissional e tecnológica
-gratuita em diferentes níveis (básico, técnico, superior e pós-graduação), com 22 campi em todo o estado. Seu 
-objetivo é formar cidadãos e profissionais por meio da articulação entre ciência, cultura, trabalho e tecnologia,
-promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
-		\end{lstlisting}
-	\end{exampleblock}
-\end{frame}
-
-\begin{frame}[fragile]
-	\frametitle{Imagem}
-	
-	\begin{itemize}
-		\item A tag \structure{<img>} é usada para incorporar imagens em uma página da web;
-		\item Precisa dos atributos \structure{src}, \structure{width} e \structure{height}.
-	\end{itemize}\vfill
-	
-	\begin{exampleblock}{Exemplo}
-		\begin{lstlisting}
-<img src="IFRN.png" width="200" height="200" />
+<p>E-mail: diego.nascimento@ifrn.edu.br</p>
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
@@ -330,9 +377,9 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
 <ul>
-	<li>Item A</li>
-	<li>Item B</li>
-	<li>Item C</li>
+   <li>Item A</li>
+   <li>Item B</li>
+   <li>Item C</li>
 </ul>
 		\end{lstlisting}
 	\end{exampleblock}
@@ -349,9 +396,9 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
 <ol>
-	<li>Primeiro Passo</li>
-	<li>Segundo Passo</li>
-	<li>Terceiro Passo</li>
+   <li>Primeiro Passo</li>
+   <li>Segundo Passo</li>
+   <li>Terceiro Passo</li>
 </ol>
 		\end{lstlisting}
 	\end{exampleblock}
@@ -368,16 +415,31 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
 <dl>
-	<dt>HTML</dt>
-		<dd>Linguagem de Marcação de Hipertexto.</dd>
-	<dt>CSS</dt>
-		<dd>Folhas de Estilo em Cascata, usadas para estilizar elementos.</dd>
+   <dt>HTML</dt>
+      <dd>Linguagem de Marcação de Hipertexto.</dd>
+   <dt>CSS</dt>
+      <dd>Folhas de Estilo em Cascata.</dd>
 </dl>
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
 
-\section{Tabela}
+\section{Imagem, Tabela e Hiperlink}
+
+\begin{frame}[fragile]
+	\frametitle{Imagem}
+	
+	\begin{itemize}
+		\item A tag \structure{<img>} é usada para incorporar imagens em uma página da web;
+		\item Precisa dos atributos \structure{src}, \structure{width} e \structure{height}.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<img src="IFRN.png" width="200" height="200"/>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Tabela}
@@ -392,20 +454,16 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	\begin{exampleblock}{Exemplo}
 	\begin{lstlisting}
 <table border="1">
-	<tr>
-		<th>Cabeçalho 1</th>
-		<th>Cabeçalho 2</th>
-	</tr>
-	<tr>
-		<td>Dado 1</td>
-		<td>Dado 2</td>
-	</tr>
+   <tr>
+      <th>Cabeçalho 1</th><th>Cabeçalho 2</th>
+   </tr>
+   <tr>
+      <td>Dado 1</td><td>Dado 2</td>
+   </tr>
 </table>
 	\end{lstlisting}
 \end{exampleblock}
 \end{frame}
-
-\section{Hiperlink}
 
 \begin{frame}[fragile]
 	\frametitle{Link}
@@ -423,7 +481,7 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
-	<a href="https://portal.ifrn.edu.br/">Google</a>
+<a href="https://portal.ifrn.edu.br/">IFRN</a>
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
@@ -442,7 +500,7 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 	
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
-<form action="salvar.php" method="POST">
+<form action="salvar.php" method="GET">
 
 </form>
 		\end{lstlisting}
@@ -464,17 +522,14 @@ promovendo a inclusão social e o desenvolvimento do Rio Grande do Norte.</p>
 			\item button; ou
 			\item submit;
 		\end{itemize}
-		\item O atributo \structure{id} identifica o componente no formulário.
+		\item O atributo \structure{id} ou \structure{name} identifica o componente no formulário.
 	\end{itemize}\vfill
 	
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
-Nome <input type="text" id="nome"> <br>
-Senha <input type="password" id="senha"> <br>
-Sexo <input type="radio" id="sexo" checked> M <input type="radio" name="sexo"> F <br>
-Confirma <input type="checkbox" id="confimacao"> <br>
-<input type="file" id="upload"> <br>
-<input type="submit" value="Salvar"> <br>
+Nome<input type="text" id="nome"><br>
+Senha<input type="password" id="senha"><br>
+<input type="submit" value="Salvar">
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
@@ -489,7 +544,7 @@ Confirma <input type="checkbox" id="confimacao"> <br>
 	
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
-<textarea id="descricao"> </textarea>
+<textarea id="descricao"></textarea>
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
@@ -506,10 +561,10 @@ Confirma <input type="checkbox" id="confimacao"> <br>
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
 <select id="UF">
-	<option value="AL">Alagoas</option>
-	<option value="CE">Ceará</option>
-	<option value="PE">Pernambuco</option>
-	<option value="RN">Rio Grande do Norte</option>
+   <option value="AL">Alagoas</option>
+   <option value="CE">Ceará</option>
+   <option value="PE">Pernambuco</option>
+   <option value="RN">Rio Grande do Norte</option>
 </select>
 		\end{lstlisting}
 	\end{exampleblock}
