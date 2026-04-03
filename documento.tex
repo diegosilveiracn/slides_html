@@ -20,7 +20,7 @@ commentstyle=\color{green},
 %morecomment=[s][\color{green}]{/**}{*/},
 showspaces=false,
 showstringspaces=false,
-morekeywords={None,True,False},
+morekeywords={video,controls, audio, autoplay, download},
 literate=
 {á}{{\'a}}1
 {Á}{{\'A}}1
@@ -103,7 +103,7 @@ diego.nascimento@ifrn.edu.br
 
 \AtBeginSection[]{
 	\begin{frame}
-		\frametitle{Ementa do Curso}
+		\frametitle{Ementa}
 		\tableofcontents[currentsection]
 	\end{frame}
 }
@@ -114,10 +114,10 @@ diego.nascimento@ifrn.edu.br
 	\frametitle{HTML}
 	
 	\begin{itemize}
-		\item É que uma linguagem de marcação fundamental para criar páginas web;
 		\item É um acrônimo para \underline{H}yperText \underline{M}arkup \underline{L}anguage;
-		\item Não é uma linguagem de programação; e
-		\item Foi criado 1991 pelo cientista Tim Berners-Lee.
+		\item É que uma linguagem de marcação fundamental para criar páginas web;
+		\item \alert{Não é uma linguagem de programação}; e
+		\item Foi criada 1991 pelo cientista Tim Berners-Lee.
 	\end{itemize}
 \end{frame}
 
@@ -350,7 +350,20 @@ diferentes níveis em todo o estado do Rio Grande do Norte.</p>
 	\end{exampleblock}
 \end{frame}
 
-\section{Listas}
+\section{Organização}
+
+\begin{frame}
+	\frametitle{Organização de conteúdo}
+	
+	\begin{itemize}
+		\item A organização de conteúdo pode ser feito de duas formas: 
+		\begin{itemize}
+			\item Listas; ou
+			\item Tabela.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{Listas}
@@ -370,7 +383,7 @@ diferentes níveis em todo o estado do Rio Grande do Norte.</p>
 	\frametitle{Lista não ordenada}
 	
 	\begin{itemize}
-		\item A tag principal é \structure{<ul>}, e o  item da lista é \structure{<li>};
+		\item A tag principal é \structure{<ul>}, e o  item da lista é \structure{<li>}; e
 		\item Ideal para itens onde a ordem não importa.
 	\end{itemize}\vfill
 	
@@ -424,23 +437,6 @@ diferentes níveis em todo o estado do Rio Grande do Norte.</p>
 	\end{exampleblock}
 \end{frame}
 
-\section{Imagem, Tabela e Hiperlink}
-
-\begin{frame}[fragile]
-	\frametitle{Imagem}
-	
-	\begin{itemize}
-		\item A tag \structure{<img>} é usada para incorporar imagens em uma página da web;
-		\item Precisa dos atributos \structure{src}, \structure{width} e \structure{height}.
-	\end{itemize}\vfill
-	
-	\begin{exampleblock}{Exemplo}
-		\begin{lstlisting}
-<img src="IFRN.png" width="200" height="200"/>
-		\end{lstlisting}
-	\end{exampleblock}
-\end{frame}
-
 \begin{frame}[fragile]
 	\frametitle{Tabela}
 	
@@ -452,7 +448,7 @@ diferentes níveis em todo o estado do Rio Grande do Norte.</p>
 	\end{itemize}
 	
 	\begin{exampleblock}{Exemplo}
-	\begin{lstlisting}
+		\begin{lstlisting}
 <table border="1">
    <tr>
       <th>Cabeçalho 1</th><th>Cabeçalho 2</th>
@@ -461,9 +457,60 @@ diferentes níveis em todo o estado do Rio Grande do Norte.</p>
       <td>Dado 1</td><td>Dado 2</td>
    </tr>
 </table>
-	\end{lstlisting}
-\end{exampleblock}
+		\end{lstlisting}
+	\end{exampleblock}
 \end{frame}
+
+\section{Mídias}
+
+\begin{frame}[fragile]
+	\frametitle{Imagem}
+	
+	\begin{itemize}
+		\item A tag \structure{<img>} é usada para incorporar imagens em uma página da web; e
+		\item Utiliza os atributos \structure{src}, \structure{alt} \structure{width} e \structure{height}.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<img src="IFRN.png" alt="Descrição." width="200" height="200"/>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Vídeo}
+	
+	\begin{itemize}
+		\item A tag \structure{<video>} permite incorporar vídeo a página.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<video controls>
+   <source src="video.mp4" type="video/mp4"/>
+</video>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Áudio}
+	
+	\begin{itemize}
+		\item A tag \structure{<audio>} baixar e executar um áudio na página da web.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<audio src="audio.ogg" autoplay>
+  <a href="audio.ogg" download="audio.ogg">Baixar</a>
+</audio>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\section{Navegação}
 
 \begin{frame}[fragile]
 	\frametitle{Link}
@@ -486,6 +533,22 @@ diferentes níveis em todo o estado do Rio Grande do Norte.</p>
 	\end{exampleblock}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Âncora}
+	
+	\begin{itemize}
+		\item A tag \structure{<a>} também permite a navegação dentro dos elementos da própria página.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<a href="#secao1">Seção 1</a>
+
+<h1 id="secao1">Primeira Seção</h1>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
 \section{Formulário}
 
 \begin{frame}[fragile]
@@ -500,7 +563,7 @@ diferentes níveis em todo o estado do Rio Grande do Norte.</p>
 	
 	\begin{exampleblock}{Exemplo}
 		\begin{lstlisting}
-<form action="salvar.php" method="GET">
+<form action="salvar.html" method="GET">
 
 </form>
 		\end{lstlisting}
@@ -566,6 +629,39 @@ Senha<input type="password" id="senha"><br>
    <option value="PE">Pernambuco</option>
    <option value="RN">Rio Grande do Norte</option>
 </select>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\section{Outros}
+
+\begin{frame}[fragile]
+	\frametitle{Comentário}
+	
+	\begin{itemize}
+		\item A tag \structure{<!- - ~~ - ->} permite incluir um comentário; e
+		\item \alert{O conteúdo que estiver dentro do bloco do comentário é ignorado pelo navegador.}
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<!-- Aqui é uma tag de parágrafo. -->
+<p>Instituto Federal do Rio Grande do Norte.</p>
+		\end{lstlisting}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Divisão}
+	
+	\begin{itemize}
+		\item A tag \structure{<div>} permite criar divisões dentro da página; e
+		\item É melhor utilizada quando combinada com CSS e JavaScript.
+	\end{itemize}\vfill
+	
+	\begin{exampleblock}{Exemplo}
+		\begin{lstlisting}
+<div id="menu"></div>
 		\end{lstlisting}
 	\end{exampleblock}
 \end{frame}
